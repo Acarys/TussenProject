@@ -1,0 +1,35 @@
+﻿@model IEnumerable<TussenTijdProject.Client.Models.CarModel>
+
+
+
+
+<div class="container text-center">
+    <div class="row">
+        @foreach (var car in Model)
+        {
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    @*  <img src="..." class="card-img-top" alt="..."> *@
+                    <div class="card-body">
+                        <h5 class="card-title">@car.Brand: @car.Model</h5>
+                        <p class="card-text">Type Car: @car.Type</p>
+                        <p class="card-text">Sort: @car.Sort</p>
+                        <p class="card-text">
+                            Gearbox: @if (car.IsManual)
+                            {
+                                <span>Manual</span>
+                            }
+                            else
+                            {
+                                <span>Automatic</span>
+                            }
+
+                        </p>
+                        <p class="card-text">Price: €@car.BenefitInKindPerMonth/Month</p>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
