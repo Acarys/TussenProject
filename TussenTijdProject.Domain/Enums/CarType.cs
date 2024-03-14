@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TussentijdsProject.Domain;
 
-namespace TussenTijdProject.Domain;
+namespace TussenTijdProject.Domain.Enums;
 public enum CarType
 {
     MPV,
