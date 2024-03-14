@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TussentijdsProject.Domain;
-public enum Type
+namespace TussenTijdProject.Domain;
+public enum CarType
 {
     Petrol, 
     Electric, 
