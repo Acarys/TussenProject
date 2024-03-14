@@ -19,10 +19,6 @@ public record CarModelDetail
     public string Model { get; set; }
     public int ExpectedDeliveryPeriodInMonths { get; set; }
     public string Remarks { get; set; }
-
-    public int TechnicalSpecsId { get; set; }
     public virtual TechnicalSpecs TechnicalSpecs { get; set; }
-
-    public int FiscalityId { get; set; }
     public virtual Fiscality Fiscality { get; set; }
 }
