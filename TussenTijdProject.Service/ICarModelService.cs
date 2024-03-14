@@ -6,5 +6,6 @@ namespace TussenTijdProject.Service
     {
         Task<IEnumerable<CarModel>> GetCarList();
         Task<CarModel> GetCarById(int id);
+        Task<CarModel> CreateCar(CarModel car);
     }
 }

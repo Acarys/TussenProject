@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TussenTijdProject.Dto.TechnicalSpecsModels;
-public record TechnicalSpecsItem
+public record TechnicalSpecsItemDto
 {
     public double FuelConsumption { get; set; }
     public double EVConsumption { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using TussenTijdProject.Domain.Enums;
 
 namespace TussenTijdProject.Dto.CarModelModels;
-public record CarItem
+public record CarItemDto
 {
     public int Id { get; set; }
     public int Category { get; set; }
@@ -15,4 +15,5 @@ public record CarItem
     public Brand Brand { get; set; }
     public FuelType FuelType { get; set; }
     public bool IsManual { get; set; }
+    public int ExpectedDeliveryPeriodInMonths { get; set; }
 }

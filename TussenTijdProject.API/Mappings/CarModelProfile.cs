@@ -8,7 +8,8 @@ public class CarModelProfile : Profile
 {
     public CarModelProfile()
     {
-        CreateMap<CarModel, CarItem>();
-        CreateMap<CarModel, CarModelDetail>();
+        CreateMap<CarModel, CarItemDto>();
+        CreateMap<CarModel, CarModelDetailDto>();
+        CreateMap<CarModel, CreateCarDto>();
     }
 }
