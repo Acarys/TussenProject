@@ -5,6 +5,5 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TussenTijdProject.Domain;
-internal class Sort
-{
-}
+public enum Sort { SUV, Break, Berline, Hatchback, MPV }
+
