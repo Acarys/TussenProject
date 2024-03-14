@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TussenTijdProject.Client.Models.CarModelViewModel>
+﻿@model IEnumerable<TussenTijdProject.Client.Models.CarsOverView>
 
 
 
@@ -27,7 +27,7 @@
                             }
 
                         </p> *@
-                        <a href="#" class="btn btn-primary">Details</a>
+                        <a  class="btn btn-primary" asp-action="Details" asp-route-id="@car.Id">Details</a>
                     </div>
                 </div>
             </div>

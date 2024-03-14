@@ -34,78 +34,151 @@
                                     <td>Model</td>
                                     <td>@Model.Model</td>
                                 </tr>
-                                @* <tr>
+                                <tr>
                                     <td>Type</td>
-                                    <td>@Model.Type</td>
+                                    <td>@Model.CarType</td>
                                 </tr>
                                 <tr>
-                                    <td>Is Manual</td>
-                                    <td>@Model.IsManual</td>
+                                    <td>Manual</td>
+                                    <td> @if (Model.IsManual)
+                                        {
+                                            <span>Yes</span>
+                                        }
+                                        else
+                                        {
+                                            <span>No</span>
+                                        }
+                                    </td>
+
                                 </tr>
                                 <tr>
-                                    <td>Is Heat Pump</td>
-                                    <td>@Model.IsHeatPump</td>
+                                    <td> Heat Pump</td>
+                                    <td> @if (Model.TechnicalSpecs.IsHeatPump){
+                                        <span>Yes</span>
+                                    }
+                                    else
+                                    {
+                                        <span>No</span>
+                                    }
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>WLTP Range</td>
-                                    <td>@Model.WLTPRange</td>
-                                </tr>
+                                
+                                
+                                @if(Model.TechnicalSpecs.RealRange != 0)
+                                {
+                                    <tr>
+                                        <td>Real Range</td>
+                                        <td>@Model.TechnicalSpecs.RealRange</td>
+                                    </tr>
+                                })
                                 <tr>
                                     <td>Real Range</td>
-                                    <td>@Model.RealRange</td>
+                                    <td>@Model.TechnicalSpecs.RealRange</td>
                                 </tr>
-                                <tr>
-                                    <td>List Price Excl VAT</td>
-                                    <td>@Model.ListPriceExclVAT</td>
-                                </tr>
-                                <tr>
-                                    <td>CO2</td>
-                                    <td>@Model.CO2</td>
-                                </tr>
-                                <tr>
-                                    <td>Benefit In Kind Per Month</td>
-                                    <td>@Model.BenefitInKindPerMonth</td>
-                                </tr>
-                                <tr>
-                                    <td>Amount Upgrade Incl VAT</td>
-                                    <td>@Model.AmountUpgradeInclVAT</td>
-                                </tr>
-                                <tr>
-                                    <td>Amount Downgrade Incl VAT</td>
-                                    <td>@Model.AmountDowngradeInclVAT</td>
-                                </tr>
-                                <tr>
-                                    <td>Fuel Consumption</td>
-                                    <td>@Model.FuelConsumption</td>
-                                </tr>
-                                <tr>
-                                    <td>EV Consumption</td>
-                                    <td>@Model.EVConsumption</td>
-                                </tr>
-                                <tr>
-                                    <td>Battery Capacity</td>
-                                    <td>@Model.BatteryCapacity</td>
-                                </tr>
-                                <tr>
-                                    <td>Horsepower</td>
-                                    <td>@Model.Horsepower</td>
-                                </tr>
-                                <tr>
-                                    <td>Max Towing Capacity</td>
-                                    <td>@Model.MaxTowingCapacity</td>
-                                </tr>
-                                <tr>
-                                    <td>Max DC Charging</td>
-                                    <td>@Model.MaxDCCharging</td>
-                                </tr>
-                                <tr>
-                                    <td>Max AC Charging</td>
-                                    <td>@Model.MaxACCharging</td>
-                                </tr> *@
-                                <tr>
-                                    <td>Expected Delivery Period In Months</td>
-                                    <td>@Model.ExpectedDeliveryPeriodInMonths</td>
-                                </tr>
+                                @if (Model.Fiscality.ListPriceExclVAT != 0)
+                                {
+                                    <tr>
+                                        <td>List Price Excl VAT</td>
+                                        <td>@Model.Fiscality.ListPriceExclVAT</td>
+                                    </tr>
+                                }
+
+                                @if (Model.TechnicalSpecs.CO2 != 0)
+                                {
+                                    <tr>
+                                        <td>CO2</td>
+                                        <td>@Model.TechnicalSpecs.CO2</td>
+                                    </tr>
+                                }
+
+                                @if (Model.Fiscality.BenefitInKindPerMonth != 0)
+                                {
+                                    <tr>
+                                        <td>Benefit In Kind Per Month</td>
+                                        <td>@Model.Fiscality.BenefitInKindPerMonth</td>
+                                    </tr>
+                                }
+
+                                @if (Model.Fiscality.AmountUpgradeInclVAT != 0)
+                                {
+                                    <tr>
+                                        <td>Amount Upgrade Incl VAT</td>
+                                        <td>@Model.Fiscality.AmountUpgradeInclVAT</td>
+                                    </tr>
+                                }
+
+                                @if (Model.Fiscality.AmountDowngradeInclVAT != 0)
+                                {
+                                    <tr>
+                                        <td>Amount Downgrade Incl VAT</td>
+                                        <td>@Model.Fiscality.AmountDowngradeInclVAT</td>
+                                    </tr>
+                                }
+
+                                @if (Model.TechnicalSpecs.FuelConsumption != 0)
+                                {
+                                    <tr>
+                                        <td>Fuel Consumption</td>
+                                        <td>@Model.TechnicalSpecs.FuelConsumption</td>
+                                    </tr>
+                                }
+
+                                @if (Model.TechnicalSpecs.EVConsumption != 0)
+                                {
+                                    <tr>
+                                        <td>EV Consumption</td>
+                                        <td>@Model.TechnicalSpecs.EVConsumption</td>
+                                    </tr>
+                                }
+
+                                @if (Model.TechnicalSpecs.BatteryCapacity != 0)
+                                {
+                                    <tr>
+                                        <td>Battery Capacity</td>
+                                        <td>@Model.TechnicalSpecs.BatteryCapacity</td>
+                                    </tr>
+                                }
+
+                                @if (Model.TechnicalSpecs.Horsepower != 0)
+                                {
+                                    <tr>
+                                        <td>Horsepower</td>
+                                        <td>@Model.TechnicalSpecs.Horsepower</td>
+                                    </tr>
+                                }
+
+                                @if (Model.TechnicalSpecs.MaxTowingCapacity != 0)
+                                {
+                                    <tr>
+                                        <td>Max Towing Capacity</td>
+                                        <td>@Model.TechnicalSpecs.MaxTowingCapacity</td>
+                                    </tr>
+                                }
+
+                                @if (Model.TechnicalSpecs.MaxDCCharging != 0)
+                                {
+                                    <tr>
+                                        <td>Max DC Charging</td>
+                                        <td>@Model.TechnicalSpecs.MaxDCCharging</td>
+                                    </tr>
+                                }
+
+                                @if (Model.TechnicalSpecs.MaxACCharging != 0)
+                                {
+                                    <tr>
+                                        <td>Max AC Charging</td>
+                                        <td>@Model.TechnicalSpecs.MaxACCharging</td>
+                                    </tr>
+                                }
+
+                                @if (Model.ExpectedDeliveryPeriodInMonths != 0)
+                                {
+                                    <tr>
+                                        <td>Expected Delivery Period In Months</td>
+                                        <td>@Model.ExpectedDeliveryPeriodInMonths</td>
+                                    </tr>
+                                }
+
                                 <tr>
                                     <td>Remarks</td>
                                     <td>@Model.Remarks</td>
