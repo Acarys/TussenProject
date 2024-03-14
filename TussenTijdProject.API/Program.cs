@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using TussenTijdProject.API.Mappings;
 using TussenTijdProject.Database.Context;
+using TussenTijdProject.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CarContext>(options =>
                             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddTransient<ICarModelService, CarModelService>();
+builder.Services.AddAutoMapper(typeof(CarModelProfile));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

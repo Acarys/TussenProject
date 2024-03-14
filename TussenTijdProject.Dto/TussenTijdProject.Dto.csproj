@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TussenTijdProject.Domain\TussenTijdProject.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
