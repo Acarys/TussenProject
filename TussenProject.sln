@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TussenTijdProject", "TussenTijdProject\TussenTijdProject.csproj", "{FE605A59-ADCF-4EF1-9707-23E9CA8BFEA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TussenTijdProject.API", "TussenTijdProject.API\TussenTijdProject.API.csproj", "{D3B0814B-4D8C-440D-8065-DA849CA6B446}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TussenTijdProject.Domain", "TussenTijdProject.Domain\TussenTijdProject.Domain.csproj", "{A6E97BD1-0431-4CE5-AB55-4B0641128C89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TussenTijdProject.Dto", "TussenTijdProject.Dto\TussenTijdProject.Dto.csproj", "{75BA1A6F-83CF-4223-926A-0FCBF305F6D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TussenTijdProject.Database", "TussenTijdProject.Database\TussenTijdProject.Database.csproj", "{C2957609-21C7-4407-91B2-057A2AE28483}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TussenTijdProject.Service", "TussenTijdProject.Service\TussenTijdProject.Service.csproj", "{16E5471F-BAE0-4BE7-A926-0A1188C19378}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE605A59-ADCF-4EF1-9707-23E9CA8BFEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE605A59-ADCF-4EF1-9707-23E9CA8BFEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE605A59-ADCF-4EF1-9707-23E9CA8BFEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE605A59-ADCF-4EF1-9707-23E9CA8BFEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3B0814B-4D8C-440D-8065-DA849CA6B446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B0814B-4D8C-440D-8065-DA849CA6B446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B0814B-4D8C-440D-8065-DA849CA6B446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B0814B-4D8C-440D-8065-DA849CA6B446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6E97BD1-0431-4CE5-AB55-4B0641128C89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6E97BD1-0431-4CE5-AB55-4B0641128C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6E97BD1-0431-4CE5-AB55-4B0641128C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6E97BD1-0431-4CE5-AB55-4B0641128C89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75BA1A6F-83CF-4223-926A-0FCBF305F6D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BA1A6F-83CF-4223-926A-0FCBF305F6D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75BA1A6F-83CF-4223-926A-0FCBF305F6D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75BA1A6F-83CF-4223-926A-0FCBF305F6D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2957609-21C7-4407-91B2-057A2AE28483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2957609-21C7-4407-91B2-057A2AE28483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2957609-21C7-4407-91B2-057A2AE28483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2957609-21C7-4407-91B2-057A2AE28483}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16E5471F-BAE0-4BE7-A926-0A1188C19378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16E5471F-BAE0-4BE7-A926-0A1188C19378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16E5471F-BAE0-4BE7-A926-0A1188C19378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16E5471F-BAE0-4BE7-A926-0A1188C19378}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17E81AC7-2B53-48F5-BC8A-E71665346533}
+	EndGlobalSection
+EndGlobal
