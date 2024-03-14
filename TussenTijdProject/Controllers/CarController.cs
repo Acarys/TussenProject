@@ -1,129 +1,60 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using TussenTijdProject.Client.Helpers;
 using TussenTijdProject.Client.Models;
+using TussenTijdProject.Dto.CarModelModels;
 
 namespace TussenTijdProject.Client.Controllers
 {
     public class CarController : Controller
     {
-        public IActionResult OverView()
+        private readonly IMapper _mapper;
+
+        public CarController(IMapper mapper)
         {
-            List<CarModel> carModels = new List<CarModel>
-        {
-            new CarModel
-            {
-                Category = 1,
-                Type = TussenTijdProject.Domain.CarType.Electric,
-                Sort = TussenTijdProject.Domain.Sort.Break,
-                Brand = "Brand1",
-                Model = "Model1",
-                Pack = "Pack1",
-                IsManual = true,
-                IsHeatPump = false,
-                WLTPRange = 100,
-                RealRange = 80,
-                ListPriceExclVAT = 20000,
-                CO2 = 120,
-                BenefitInKindPerMonth = 150,
-                AmountUpgradeInclVAT = 500,
-                AmountDowngradeInclVAT = 300,
-                FuelConsumption = 7.5,
-                EVConsumption = 2.5,
-                BatteryCapacity = 75,
-                Horsepower = 150,
-                MaxTowingCapacity = 2000,
-                MaxDCCharging = 50,
-                MaxACCharging = 22,
-                ExpectedDeliveryPeriodInMonths = 3,
-                Remarks = "Remark1"
-            },
-            new CarModel
-            {
-                Category = 1,
-                Type = TussenTijdProject.Domain.CarType.Electric,
-                Sort = TussenTijdProject.Domain.Sort.Break,
-                Brand = "Brand1",
-                Model = "Model1",
-                Pack = "Pack1",
-                IsManual = true,
-                IsHeatPump = false,
-                WLTPRange = 100,
-                RealRange = 80,
-                ListPriceExclVAT = 20000,
-                CO2 = 120,
-                BenefitInKindPerMonth = 150,
-                AmountUpgradeInclVAT = 500,
-                AmountDowngradeInclVAT = 300,
-                FuelConsumption = 7.5,
-                EVConsumption = 2.5,
-                BatteryCapacity = 75,
-                Horsepower = 150,
-                MaxTowingCapacity = 2000,
-                MaxDCCharging = 50,
-                MaxACCharging = 22,
-                ExpectedDeliveryPeriodInMonths = 3,
-                Remarks = "Remark1"
-            },
-             new CarModel
-            {
-                Category = 1,
-                Type = TussenTijdProject.Domain.CarType.Electric,
-                Sort = TussenTijdProject.Domain.Sort.Break,
-                Brand = "Brand1",
-                Model = "Model1",
-                Pack = "Pack1",
-                IsManual = true,
-                IsHeatPump = false,
-                WLTPRange = 100,
-                RealRange = 80,
-                ListPriceExclVAT = 20000,
-                CO2 = 120,
-                BenefitInKindPerMonth = 150,
-                AmountUpgradeInclVAT = 500,
-                AmountDowngradeInclVAT = 300,
-                FuelConsumption = 7.5,
-                EVConsumption = 2.5,
-                BatteryCapacity = 75,
-                Horsepower = 150,
-                MaxTowingCapacity = 2000,
-                MaxDCCharging = 50,
-                MaxACCharging = 22,
-                ExpectedDeliveryPeriodInMonths = 3,
-                Remarks = "Remark1"
-            },
-        };
-            return View(carModels);
+            _mapper = mapper;
         }
 
-        public IActionResult Details()
+        public async Task<IActionResult> OverView()
         {
-            CarModel car = new CarModel
+            List<CarsOverView> model = new List<CarsOverView>();
+
+            HttpClient client = new HttpClient();
+            client = client.Configure();
+
+            HttpResponseMessage res = await client.GetAsync("car");
+            if (res.IsSuccessStatusCode)
             {
-                Category = 1,
-                Type = TussenTijdProject.Domain.CarType.Electric,
-                Sort = TussenTijdProject.Domain.Sort.Break,
-                Brand = "Brand1",
-                Model = "Model1",
-                Pack = "Pack1",
-                IsManual = true,
-                IsHeatPump = false,
-                WLTPRange = 100,
-                RealRange = 80,
-                ListPriceExclVAT = 20000,
-                CO2 = 120,
-                BenefitInKindPerMonth = 150,
-                AmountUpgradeInclVAT = 500,
-                AmountDowngradeInclVAT = 300,
-                FuelConsumption = 7.5,
-                EVConsumption = 2.5,
-                BatteryCapacity = 75,
-                Horsepower = 150,
-                MaxTowingCapacity = 2000,
-                MaxDCCharging = 50,
-                MaxACCharging = 22,
-                ExpectedDeliveryPeriodInMonths = 3,
-                Remarks = "Remark1"
-            };
-            return View(car);
+                IEnumerable<CarModelOverview>? cars = await res.Content.ReadFromJsonAsync<IEnumerable<CarModelOverview>>();
+                IEnumerable<CarsOverView> result = _mapper.Map<IEnumerable<CarModelOverview>, IEnumerable<CarsOverView>>(cars);
+
+                model.AddRange(result);
+            }
+
+            if (model == null)
+            {
+                TempData["error"] = "Something went wrong.";
+            }
+            return View(model);
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            CarModelViewModel model = new CarModelViewModel();
+
+            HttpClient client = new HttpClient();
+            client = client.Configure();
+
+            HttpResponseMessage res = await client.GetAsync(client.BaseAddress + "car/" + id.ToString());
+            if (res.IsSuccessStatusCode)
+            {
+                CarModelDetail car = await res.Content.ReadFromJsonAsync<CarModelDetail>();
+
+                model = _mapper.Map<CarModelViewModel>(car);
+            }
+
+            return View(model);
         }
     }
 }

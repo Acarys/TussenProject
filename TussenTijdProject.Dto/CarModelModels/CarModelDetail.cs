@@ -13,7 +13,7 @@ public record CarModelDetail
     public int Id { get; set; }
     public int Category { get; set; }
     public string Pack { get; set; }
-    public CarType CarType { get; set; }
+    public Domain.Enums.CarType CarType { get; set; }
     public Brand Brand { get; set; }
     public FuelType FuelType { get; set; }
     public string Model { get; set; }
