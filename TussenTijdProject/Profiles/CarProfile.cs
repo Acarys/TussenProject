@@ -11,8 +11,8 @@ namespace TussenTijdProject.Client.Profiles
         {
 
             CreateMap<CarItemDto, CarsOverView>();
-            CreateMap<CarModelDetailDto, TussentijdsProject.Domain.CarModel>();
-
+            CreateMap<CarModelDetailDto, CarModelViewModel>();
+           
         }
     }
 }

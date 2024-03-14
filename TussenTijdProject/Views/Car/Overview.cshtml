@@ -16,8 +16,9 @@
                         <p class="card-text">Sort: @car.Brand</p>
                         <p class="card-text">Type Car: @car.FuelType</p>
                         <p class="card-text">Sort: @car.CarType</p>
-                        @* <p class="card-text">
-                            Gearbox: @if (car.TechnicalSpecs.IsManual)
+                        <p class="card-text">Expected delivery: @car.ExpectedDeliveryPeriodInMonths Month</p>
+                        <p class="card-text">
+                            Gearbox: @if (car.IsManual)
                             {
                                 <span>Manual</span>
                             }
@@ -26,7 +27,7 @@
                                 <span>Automatic</span>
                             }
 
-                        </p> *@
+                        </p>
                         <a  class="btn btn-primary" asp-action="Details" asp-route-id="@car.Id">Details</a>
                     </div>
                 </div>
