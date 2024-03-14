@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TussenTijdProject.Domain\TussenTijdProject.Domain.csproj" />
+    <ProjectReference Include="..\TussenTijdProject.Dto\TussenTijdProject.Dto.csproj" />
   </ItemGroup>
 
 </Project>

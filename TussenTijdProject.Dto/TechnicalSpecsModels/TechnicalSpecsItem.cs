@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TussentijdsProject.Domain;
 
-namespace TussenTijdProject.Domain;
-public class TechnicalSpecs
+namespace TussenTijdProject.Dto.TechnicalSpecsModels;
+public record TechnicalSpecsItem
 {
-    public int Id { get; set; }
     public double FuelConsumption { get; set; }
     public double EVConsumption { get; set; }
     public int BatteryCapacity { get; set; }

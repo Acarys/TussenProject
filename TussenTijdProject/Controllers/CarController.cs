@@ -26,8 +26,8 @@ namespace TussenTijdProject.Client.Controllers
             HttpResponseMessage res = await client.GetAsync("car");
             if (res.IsSuccessStatusCode)
             {
-                IEnumerable<CarModelOverview>? cars = await res.Content.ReadFromJsonAsync<IEnumerable<CarModelOverview>>();
-                IEnumerable<CarsOverView> result = _mapper.Map<IEnumerable<CarModelOverview>, IEnumerable<CarsOverView>>(cars);
+                IEnumerable<CarItem>? cars = await res.Content.ReadFromJsonAsync<IEnumerable<CarItem>>();
+                IEnumerable<CarsOverView> result = _mapper.Map<IEnumerable<CarItem>, IEnumerable<CarsOverView>>(cars);
 
                 model.AddRange(result);
             }
