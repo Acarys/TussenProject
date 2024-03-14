@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TussenTijdProject.Client.Models.CarModel>
+﻿@model IEnumerable<TussenTijdProject.Client.Models.CarModelViewModel>
 
 
 
@@ -12,10 +12,12 @@
                     @*  <img src="..." class="card-img-top" alt="..."> *@
                     <div class="card-body">
                         <h5 class="card-title">@car.Brand: @car.Model</h5>
-                        <p class="card-text">Type Car: @car.Type</p>
-                        <p class="card-text">Sort: @car.Sort</p>
-                        <p class="card-text">
-                            Gearbox: @if (car.IsManual)
+                        <p class="card-text">Type Car: @car.Category</p>
+                        <p class="card-text">Sort: @car.Brand</p>
+                        <p class="card-text">Type Car: @car.FuelType</p>
+                        <p class="card-text">Sort: @car.CarType</p>
+                        @* <p class="card-text">
+                            Gearbox: @if (car.TechnicalSpecs.IsManual)
                             {
                                 <span>Manual</span>
                             }
@@ -24,8 +26,7 @@
                                 <span>Automatic</span>
                             }
 
-                        </p>
-                        <p class="card-text">Price: €@car.BenefitInKindPerMonth/Month</p>
+                        </p> *@
                         <a href="#" class="btn btn-primary">Details</a>
                     </div>
                 </div>

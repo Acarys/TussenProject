@@ -1,4 +1,4 @@
-﻿@model TussenTijdProject.Client.Models.CarModel
+﻿@model TussenTijdProject.Client.Models.CarModelViewModel
 <div class="container">
     <div class="card">
         <div class="card-body">
@@ -10,9 +10,9 @@
                 </div> *@
                 <div class="col-lg-7 col-md-7 col-sm-6">
                    
-                    <h2 class="mt-5">
+@*                     <h2 class="mt-5">
                         €@Model.BenefitInKindPerMonth/Month
-                    </h2>
+                    </h2> *@
                     
                     @* <h3 class="box-title mt-5">Key Highlights</h3> *@
                     @* <ul class="list-unstyled">
@@ -34,7 +34,7 @@
                                     <td>Model</td>
                                     <td>@Model.Model</td>
                                 </tr>
-                                <tr>
+                                @* <tr>
                                     <td>Type</td>
                                     <td>@Model.Type</td>
                                 </tr>
@@ -101,7 +101,7 @@
                                 <tr>
                                     <td>Max AC Charging</td>
                                     <td>@Model.MaxACCharging</td>
-                                </tr>
+                                </tr> *@
                                 <tr>
                                     <td>Expected Delivery Period In Months</td>
                                     <td>@Model.ExpectedDeliveryPeriodInMonths</td>

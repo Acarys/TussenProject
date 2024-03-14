@@ -1,6 +1,7 @@
 ﻿using TussenTijdProject.Client.Models;
 using TussentijdsProject.Domain;
 using AutoMapper;
+using TussenTijdProject.Dto.CarModelModels;
 
 namespace TussenTijdProject.Client.Profiles
 {
@@ -8,8 +9,8 @@ namespace TussenTijdProject.Client.Profiles
     {
         public CarProfile()
         {
-           CreateMap<CarModel, Car>();
-               
+            CreateMap<CarModelOverview, CarsOverView>();
+            CreateMap<CarModelDetail, TussentijdsProject.Domain.CarModel>();
         }
     }
 }
