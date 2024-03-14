@@ -13,6 +13,7 @@ public class CarModel
     public Brand Brand { get; set; }
     public FuelType FuelType { get; set; }
     public string Model { get; set; }
+    public bool IsManual { get; set; }
     public int ExpectedDeliveryPeriodInMonths { get; set; }
     public string Remarks { get; set; }
 
