@@ -4,10 +4,22 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>e1275561-ceb6-4308-898f-588165903eaf</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TussenTijdProject.Database\TussenTijdProject.Database.csproj" />
+    <ProjectReference Include="..\TussenTijdProject.Domain\TussenTijdProject.Domain.csproj" />
+    <ProjectReference Include="..\TussenTijdProject.Dto\TussenTijdProject.Dto.csproj" />
+    <ProjectReference Include="..\TussenTijdProject.Service\TussenTijdProject.Service.csproj" />
   </ItemGroup>
 
 </Project>
