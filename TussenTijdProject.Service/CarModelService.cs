@@ -17,6 +17,14 @@ public class CarModelService : ICarModelService
     {
         _ctx = ctx;
     }
+
+    public async Task<CarModel> CreateCar(CarModel car)
+    {
+        _ctx.CarModels.Add(car);
+        await _ctx.SaveChangesAsync();
+        return car;
+    }
+
     public async Task<CarModel> GetCarById(int id)
     {
         CarModel car = await _ctx.CarModels

@@ -10,7 +10,7 @@ using TussenTijdProject.Dto.FiscalityModels;
 using TussenTijdProject.Dto.TechnicalSpecsModels;
 
 namespace TussenTijdProject.Dto.CarModelModels;
-public record CarModelDetail
+public record CarModelDetailDto
 {
     public int Category { get; set; }
     public string Pack { get; set; }
@@ -21,6 +21,6 @@ public record CarModelDetail
     public bool IsManual { get; set; }
     public int ExpectedDeliveryPeriodInMonths { get; set; }
     public string Remarks { get; set; }
-    public TechnicalSpecsItem TechnicalSpecs { get; set; }
-    public FiscalityItem Fiscality { get; set; }
+    public TechnicalSpecsItemDto TechnicalSpecs { get; set; }
+    public FiscalityItemDto Fiscality { get; set; }
 }

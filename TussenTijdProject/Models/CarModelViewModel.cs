@@ -16,7 +16,7 @@ namespace TussenTijdProject.Client.Models
         public bool IsManual { get; set; }
         public int ExpectedDeliveryPeriodInMonths { get; set; }
         public string Remarks { get; set; }
-        public TechnicalSpecsItem TechnicalSpecs { get; set; }
-        public FiscalityItem Fiscality { get; set; }
+        public TechnicalSpecsItemDto TechnicalSpecs { get; set; }
+        public FiscalityItemDto Fiscality { get; set; }
     }
 }
