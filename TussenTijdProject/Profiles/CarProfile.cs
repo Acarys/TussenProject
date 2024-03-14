@@ -9,9 +9,10 @@ namespace TussenTijdProject.Client.Profiles
     {
         public CarProfile()
         {
-            CreateMap<CarItem, CarsOverView>();
-            CreateMap<CarModelDetail, TussentijdsProject.Domain.CarModel>();
-            CreateMap<CarModelDetail, CarModelViewModel>();
+
+            CreateMap<CarItemDto, CarsOverView>();
+            CreateMap<CarModelDetailDto, TussentijdsProject.Domain.CarModel>();
+
         }
     }
 }

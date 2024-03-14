@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TussenTijdProject.Dto.FiscalityModels;
-public record FiscalityItem
+public record FiscalityItemDto
 {
     public decimal ListPriceExclVAT { get; set; }
     public decimal BenefitInKindPerMonth { get; set; }

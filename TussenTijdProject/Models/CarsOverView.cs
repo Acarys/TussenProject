@@ -11,5 +11,6 @@ namespace TussenTijdProject.Client.Models
         public Brand Brand { get; set; }
         public FuelType FuelType { get; set; }
         public bool IsManual { get; set; }
+        public int ExpectedDeliveryPeriodInMonths { get; set; }
     }
 }

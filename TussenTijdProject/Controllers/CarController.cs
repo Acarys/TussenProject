@@ -26,8 +26,8 @@ namespace TussenTijdProject.Client.Controllers
             HttpResponseMessage res = await client.GetAsync("car");
             if (res.IsSuccessStatusCode)
             {
-                IEnumerable<CarItem>? cars = await res.Content.ReadFromJsonAsync<IEnumerable<CarItem>>();
-                IEnumerable<CarsOverView> result = _mapper.Map<IEnumerable<CarItem>, IEnumerable<CarsOverView>>(cars);
+                IEnumerable<CarItemDto>? cars = await res.Content.ReadFromJsonAsync<IEnumerable<CarItemDto>>();
+                IEnumerable<CarsOverView> result = _mapper.Map<IEnumerable<CarItemDto>, IEnumerable<CarsOverView>>(cars);
 
                 model.AddRange(result);
             }
@@ -49,7 +49,7 @@ namespace TussenTijdProject.Client.Controllers
             HttpResponseMessage res = await client.GetAsync(client.BaseAddress + "car/" + id.ToString());
             if (res.IsSuccessStatusCode)
             {
-                CarModelDetail car = await res.Content.ReadFromJsonAsync<CarModelDetail>();
+                CarModelDetailDto car = await res.Content.ReadFromJsonAsync<CarModelDetailDto>();
 
                 model = _mapper.Map<CarModelViewModel>(car);
             }

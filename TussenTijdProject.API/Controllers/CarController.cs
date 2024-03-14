@@ -20,22 +20,31 @@ public class CarController : Controller
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<CarItem>>> Get()
+    public async Task<ActionResult<IEnumerable<CarItemDto>>> Get()
     {
         IEnumerable<CarModel> cars = await _carModelService.GetCarList();
-        IEnumerable<CarItem> result = _mapper.Map<IEnumerable<CarModel>, IEnumerable<CarItem>>(cars);
+        IEnumerable<CarItemDto> result = _mapper.Map<IEnumerable<CarModel>, IEnumerable<CarItemDto>>(cars);
 
         return Ok(result);
     }
 
     [HttpGet("{id:int}")]
-    public async Task<ActionResult<CarModelDetail>> GetById(int id)
+    public async Task<ActionResult<CarModelDetailDto>> GetById(int id)
     {
         CarModel car = await _carModelService.GetCarById(id);
         if (car == null)
             return NotFound();
 
-        CarModelDetail CarDetail = _mapper.Map<CarModelDetail>(car);
+        CarModelDetailDto CarDetail = _mapper.Map<CarModelDetailDto>(car);
         return Ok(CarDetail);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult> Create([FromBody] CreateCarDto createCar)
+    {
+        CarModel car = _mapper.Map<CarModel>(createCar);
+        await _carModelService.CreateCar(car);
+        CarModelDetailDto carDetail = _mapper.Map<CarModelDetailDto>(car);
+        return CreatedAtAction(nameof(Get), new { Id = car.Id }, carDetail);
     }
 }
