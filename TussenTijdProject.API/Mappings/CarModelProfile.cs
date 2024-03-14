@@ -8,7 +8,7 @@ public class CarModelProfile : Profile
 {
     public CarModelProfile()
     {
-        CreateMap<CarModel, CarModelOverview>();
+        CreateMap<CarModel, CarItem>();
         CreateMap<CarModel, CarModelDetail>();
     }
 }

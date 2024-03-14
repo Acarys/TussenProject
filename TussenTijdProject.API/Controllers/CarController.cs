@@ -20,10 +20,10 @@ public class CarController : Controller
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<CarModelOverview>>> Get()
+    public async Task<ActionResult<IEnumerable<CarItem>>> Get()
     {
         IEnumerable<CarModel> cars = await _carModelService.GetCarList();
-        IEnumerable<CarModelOverview> result = _mapper.Map<IEnumerable<CarModel>, IEnumerable<CarModelOverview>>(cars);
+        IEnumerable<CarItem> result = _mapper.Map<IEnumerable<CarModel>, IEnumerable<CarItem>>(cars);
 
         return Ok(result);
     }
