@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TussenTijdProject.Domain;
 
-namespace TussentijdsProject.Domain;
+namespace TussenTijdProject.Domain.Enums;
 public enum FuelType
 {
     Petrol,

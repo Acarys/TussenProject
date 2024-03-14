@@ -1,10 +1,13 @@
-﻿using TussenTijdProject.Domain;
+﻿using Microsoft.VisualBasic.FileIO;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using TussenTijdProject.Domain.Enums;
 
-namespace TussentijdsProject.Domain;
-
-
-public class CarModel
+namespace TussenTijdProject.Dto.CarModelModels;
+public record CarModelDetail
 {
     public int Id { get; set; }
     public int Category { get; set; }

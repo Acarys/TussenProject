@@ -6,6 +6,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using TussenTijdProject.Domain;
+using TussenTijdProject.Domain.Enums;
 using TussentijdsProject.Domain;
 
 namespace TussenTijdProject.Database.Context;
