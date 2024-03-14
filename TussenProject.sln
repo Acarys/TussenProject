@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TussenTijdProject", "TussenTijdProject\TussenTijdProject.csproj", "{FE605A59-ADCF-4EF1-9707-23E9CA8BFEA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TussenTijdProject.Client", "TussenTijdProject\TussenTijdProject.Client.csproj", "{FE605A59-ADCF-4EF1-9707-23E9CA8BFEA3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TussenTijdProject.API", "TussenTijdProject.API\TussenTijdProject.API.csproj", "{D3B0814B-4D8C-440D-8065-DA849CA6B446}"
 EndProject

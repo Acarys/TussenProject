@@ -1,0 +1,122 @@
+﻿@model TussenTijdProject.Client.Models.CarModel
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">@Model.Brand</h3>
+            <h6 class="card-subtitle">@Model.Model</h6>
+            <div class="row">
+               @*  <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div class="white-box text-center"><img src="https://www.bootdey.com/image/430x600/00CED1/000000" class="img-responsive"></div>
+                </div> *@
+                <div class="col-lg-7 col-md-7 col-sm-6">
+                   
+                    <h2 class="mt-5">
+                        €@Model.BenefitInKindPerMonth/Month
+                    </h2>
+                    
+                    @* <h3 class="box-title mt-5">Key Highlights</h3> *@
+                    @* <ul class="list-unstyled">
+                        <li><i class="fa fa-check text-success"></i>Sturdy structure</li>
+                        <li><i class="fa fa-check text-success"></i>Designed to foster easy portability</li>
+                        <li><i class="fa fa-check text-success"></i>Perfect furniture to flaunt your wonderful collectibles</li>
+                    </ul> *@
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <h3 class="box-title mt-5">General Info</h3>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-product">
+                            <tbody>
+                                <tr>
+                                    <td width="390">Brand</td>
+                                    <td>@Model.Brand</td>
+                                </tr>
+                                <tr>
+                                    <td>Model</td>
+                                    <td>@Model.Model</td>
+                                </tr>
+                                <tr>
+                                    <td>Type</td>
+                                    <td>@Model.Type</td>
+                                </tr>
+                                <tr>
+                                    <td>Is Manual</td>
+                                    <td>@Model.IsManual</td>
+                                </tr>
+                                <tr>
+                                    <td>Is Heat Pump</td>
+                                    <td>@Model.IsHeatPump</td>
+                                </tr>
+                                <tr>
+                                    <td>WLTP Range</td>
+                                    <td>@Model.WLTPRange</td>
+                                </tr>
+                                <tr>
+                                    <td>Real Range</td>
+                                    <td>@Model.RealRange</td>
+                                </tr>
+                                <tr>
+                                    <td>List Price Excl VAT</td>
+                                    <td>@Model.ListPriceExclVAT</td>
+                                </tr>
+                                <tr>
+                                    <td>CO2</td>
+                                    <td>@Model.CO2</td>
+                                </tr>
+                                <tr>
+                                    <td>Benefit In Kind Per Month</td>
+                                    <td>@Model.BenefitInKindPerMonth</td>
+                                </tr>
+                                <tr>
+                                    <td>Amount Upgrade Incl VAT</td>
+                                    <td>@Model.AmountUpgradeInclVAT</td>
+                                </tr>
+                                <tr>
+                                    <td>Amount Downgrade Incl VAT</td>
+                                    <td>@Model.AmountDowngradeInclVAT</td>
+                                </tr>
+                                <tr>
+                                    <td>Fuel Consumption</td>
+                                    <td>@Model.FuelConsumption</td>
+                                </tr>
+                                <tr>
+                                    <td>EV Consumption</td>
+                                    <td>@Model.EVConsumption</td>
+                                </tr>
+                                <tr>
+                                    <td>Battery Capacity</td>
+                                    <td>@Model.BatteryCapacity</td>
+                                </tr>
+                                <tr>
+                                    <td>Horsepower</td>
+                                    <td>@Model.Horsepower</td>
+                                </tr>
+                                <tr>
+                                    <td>Max Towing Capacity</td>
+                                    <td>@Model.MaxTowingCapacity</td>
+                                </tr>
+                                <tr>
+                                    <td>Max DC Charging</td>
+                                    <td>@Model.MaxDCCharging</td>
+                                </tr>
+                                <tr>
+                                    <td>Max AC Charging</td>
+                                    <td>@Model.MaxACCharging</td>
+                                </tr>
+                                <tr>
+                                    <td>Expected Delivery Period In Months</td>
+                                    <td>@Model.ExpectedDeliveryPeriodInMonths</td>
+                                </tr>
+                                <tr>
+                                    <td>Remarks</td>
+                                    <td>@Model.Remarks</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
