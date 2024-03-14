@@ -1,14 +1,13 @@
-﻿namespace TussentijdsProject.Domain;
+﻿using TussenTijdProject.Domain;
+
+namespace TussentijdsProject.Domain;
 public enum Sort { SUV, Break, Berline, Hatchback, MPV }
 
 
-public class Car
+public class CarModel
 {
     public int Id { get; set; }
     public int Category { get; set; }
-    public Type Type { get; set; }
-    public Sort Sort { get; set; }
-    public string Brand { get; set; }
     public string Model { get; set; }
     public string Pack { get; set; }
     public bool IsManual { get; set; }
@@ -29,4 +28,13 @@ public class Car
     public double MaxACCharging { get; set; }
     public int ExpectedDeliveryPeriodInMonths { get; set; }
     public string Remarks { get; set; }
+
+    public int BrandId { get; set; }
+    public virtual Brand Brand { get; set; }
+
+    public int TypeId { get; set; }
+    public virtual Type Type { get; set; }
+
+    public int SortId { get; set; }
+    public Sort Sort { get; set; }
 }
