@@ -2,9 +2,9 @@
 using TussentijdsProject.Domain;
 using AutoMapper;
 
-namespace TussenTijdProject.Client.Profile
+namespace TussenTijdProject.Client.Profiles
 {
-    public class CarProfile
+    public class CarProfile: Profile
     {
         public CarProfile()
         {
