@@ -1,16 +1,17 @@
-﻿<div class="container">
+﻿@model TussenTijdProject.Client.Models.CarModel
+<div class="container">
     <div class="card">
         <div class="card-body">
-            <h3 class="card-title">Tesla</h3>
-            <h6 class="card-subtitle">Model Y</h6>
+            <h3 class="card-title">@Model.Brand</h3>
+            <h6 class="card-subtitle">@Model.Model</h6>
             <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-6">
+               @*  <div class="col-lg-5 col-md-5 col-sm-6">
                     <div class="white-box text-center"><img src="https://www.bootdey.com/image/430x600/00CED1/000000" class="img-responsive"></div>
-                </div>
+                </div> *@
                 <div class="col-lg-7 col-md-7 col-sm-6">
                    
                     <h2 class="mt-5">
-                        €153/Month
+                        €@Model.BenefitInKindPerMonth/Month
                     </h2>
                     
                     @* <h3 class="box-title mt-5">Key Highlights</h3> *@
@@ -27,67 +28,93 @@
                             <tbody>
                                 <tr>
                                     <td width="390">Brand</td>
-                                    <td>Stellar</td>
+                                    <td>@Model.Brand</td>
                                 </tr>
                                 <tr>
-                                    <td>Delivery Condition</td>
-                                    <td>Knock Down</td>
-                                </tr>
-                                <tr>
-                                    <td>Seat Lock Included</td>
-                                    <td>Yes</td>
+                                    <td>Model</td>
+                                    <td>@Model.Model</td>
                                 </tr>
                                 <tr>
                                     <td>Type</td>
-                                    <td>Office Chair</td>
+                                    <td>@Model.Type</td>
                                 </tr>
                                 <tr>
-                                    <td>Style</td>
-                                    <td>Contemporary&amp;Modern</td>
+                                    <td>Is Manual</td>
+                                    <td>@Model.IsManual</td>
                                 </tr>
                                 <tr>
-                                    <td>Wheels Included</td>
-                                    <td>Yes</td>
+                                    <td>Is Heat Pump</td>
+                                    <td>@Model.IsHeatPump</td>
                                 </tr>
                                 <tr>
-                                    <td>Upholstery Included</td>
-                                    <td>Yes</td>
+                                    <td>WLTP Range</td>
+                                    <td>@Model.WLTPRange</td>
                                 </tr>
                                 <tr>
-                                    <td>Upholstery Type</td>
-                                    <td>Cushion</td>
+                                    <td>Real Range</td>
+                                    <td>@Model.RealRange</td>
                                 </tr>
                                 <tr>
-                                    <td>Head Support</td>
-                                    <td>No</td>
+                                    <td>List Price Excl VAT</td>
+                                    <td>@Model.ListPriceExclVAT</td>
                                 </tr>
                                 <tr>
-                                    <td>Suitable For</td>
-                                    <td>Study&amp;Home Office</td>
+                                    <td>CO2</td>
+                                    <td>@Model.CO2</td>
                                 </tr>
                                 <tr>
-                                    <td>Adjustable Height</td>
-                                    <td>Yes</td>
+                                    <td>Benefit In Kind Per Month</td>
+                                    <td>@Model.BenefitInKindPerMonth</td>
                                 </tr>
                                 <tr>
-                                    <td>Model Number</td>
-                                    <td>F01020701-00HT744A06</td>
+                                    <td>Amount Upgrade Incl VAT</td>
+                                    <td>@Model.AmountUpgradeInclVAT</td>
                                 </tr>
                                 <tr>
-                                    <td>Armrest Included</td>
-                                    <td>Yes</td>
+                                    <td>Amount Downgrade Incl VAT</td>
+                                    <td>@Model.AmountDowngradeInclVAT</td>
                                 </tr>
                                 <tr>
-                                    <td>Care Instructions</td>
-                                    <td>Handle With Care,Keep In Dry Place,Do Not Apply Any Chemical For Cleaning.</td>
+                                    <td>Fuel Consumption</td>
+                                    <td>@Model.FuelConsumption</td>
                                 </tr>
                                 <tr>
-                                    <td>Finish Type</td>
-                                    <td>Matte</td>
+                                    <td>EV Consumption</td>
+                                    <td>@Model.EVConsumption</td>
                                 </tr>
+                                <tr>
+                                    <td>Battery Capacity</td>
+                                    <td>@Model.BatteryCapacity</td>
+                                </tr>
+                                <tr>
+                                    <td>Horsepower</td>
+                                    <td>@Model.Horsepower</td>
+                                </tr>
+                                <tr>
+                                    <td>Max Towing Capacity</td>
+                                    <td>@Model.MaxTowingCapacity</td>
+                                </tr>
+                                <tr>
+                                    <td>Max DC Charging</td>
+                                    <td>@Model.MaxDCCharging</td>
+                                </tr>
+                                <tr>
+                                    <td>Max AC Charging</td>
+                                    <td>@Model.MaxACCharging</td>
+                                </tr>
+                                <tr>
+                                    <td>Expected Delivery Period In Months</td>
+                                    <td>@Model.ExpectedDeliveryPeriodInMonths</td>
+                                </tr>
+                                <tr>
+                                    <td>Remarks</td>
+                                    <td>@Model.Remarks</td>
+                                </tr>
+
                             </tbody>
                         </table>
                     </div>
+
                 </div>
             </div>
         </div>
